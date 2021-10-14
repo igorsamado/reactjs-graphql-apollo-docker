@@ -1,0 +1,15 @@
+type Query {
+  getAllAlunos: [Aluno]
+}
+
+type Aluno {
+  id: ID!
+  nome: String!
+  email: String!
+  cpf: String!
+}
+
+type Mutation {
+  addAluno(nome: String!, email: String!, cpf: String!): Aluno
+  removeAluno(id: ID!): Aluno
+}
